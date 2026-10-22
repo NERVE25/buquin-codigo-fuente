@@ -84,7 +84,7 @@ export const ProductVisual: React.FC<ProductVisualProps> = ({
   // If real image is available and hasn't errored
   if (imageSrc && !imageError) {
     return (
-      <div className={`relative ${containerDimensions} flex items-center justify-center p-3 rounded-2xl overflow-hidden bg-gradient-to-b from-stone-50 via-white to-stone-100/80 border border-stone-100 shadow-inner group-hover:scale-[1.02] transition-transform duration-300`}>
+      <div className={`relative ${containerDimensions} flex items-center justify-center p-3 rounded-2xl overflow-hidden bg-gradient-to-br from-stone-100 via-stone-50 to-stone-200/70 border border-stone-200/80 shadow-inner group-hover:scale-[1.02] transition-transform duration-300`}>
         {/* Subtle radial ambient glow based on product theme */}
         <div 
           className="absolute w-36 h-36 rounded-full opacity-15 blur-2xl pointer-events-none"
@@ -97,7 +97,7 @@ export const ProductVisual: React.FC<ProductVisualProps> = ({
             src={imageSrc}
             alt={alt || `${badgeText} - ${presentationType}`}
             onError={() => setImageError(true)}
-            className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:drop-shadow-xl transition-all duration-300"
+            className="max-h-full max-w-full object-contain mix-blend-multiply filter drop-shadow-lg group-hover:drop-shadow-2xl transition-all duration-300 scale-[1.06]"
             loading="lazy"
           />
         </div>
