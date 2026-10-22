@@ -146,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({
                                 <img 
                                   src={prod.imagenPrincipal} 
                                   alt={prod.nombre} 
-                                  className="w-5 h-5 object-contain rounded bg-stone-50 border border-stone-200 p-0.5" 
+                                  className="w-5 h-5 object-contain rounded shrink-0 mix-blend-multiply" 
                                 />
                               )}
                               <span className="truncate">{prod.nombre}</span>
