@@ -136,7 +136,7 @@ export const ProductDetailPageView: React.FC<ProductDetailPageViewProps> = ({
                     <img 
                       src={p.imagenPrincipal} 
                       alt={p.nombre} 
-                      className="w-4 h-4 object-contain rounded shrink-0 bg-white" 
+                      className="w-4 h-4 object-contain rounded shrink-0 mix-blend-multiply" 
                     />
                   )}
                   <span>{p.nombre}</span>
@@ -190,35 +190,24 @@ export const ProductDetailPageView: React.FC<ProductDetailPageViewProps> = ({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          {/* Left Column: Real Photographic Poster / Real Image Showcase */}
-          <div className="lg:col-span-5 flex justify-center">
-            {product.id === 'salsa-tomate' ? (
-              /* The exact original poster image cropped from user's layout */
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-red-700/20 max-w-sm hover:scale-[1.02] transition-transform duration-300 bg-white">
-                <img 
-                  src="/assets/aistudio/poster_tomate_perfect.png" 
-                  alt="Afiche oficial Salsa con Tomate Buquin" 
-                  className="w-full h-auto object-cover"
+          {/* Product packshot: no extra white frame behind the package */}
+          <div className="lg:col-span-5 flex justify-center items-center">
+            <div className="w-full max-w-md flex flex-col items-center text-center">
+              <div className="h-64 sm:h-72 w-full flex items-center justify-center overflow-visible">
+                <img
+                  src={product.imagenPrincipal}
+                  alt={`${product.nombre} Buquin`}
+                  className="max-h-full max-w-full object-contain mix-blend-multiply transition-transform duration-300 hover:scale-105"
+                  loading="lazy"
                 />
               </div>
-            ) : (
-              /* Real Packshot Showcase Card for the other products */
-              <div className="w-full max-w-md bg-stone-50 rounded-3xl p-6 border border-stone-200 shadow-xl flex flex-col items-center text-center">
-                <div className="h-64 sm:h-72 w-full flex items-center justify-center p-4 bg-white rounded-2xl shadow-inner mb-4">
-                  <img 
-                    src={product.imagenPrincipal} 
-                    alt={product.nombre} 
-                    className="max-h-full max-w-full object-contain filter drop-shadow-md hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="font-black text-stone-900 text-lg uppercase tracking-tight">
-                  {product.nombre} Buquin
-                </h3>
-                <span className="text-xs font-semibold text-red-600 mt-1">
-                  Línea Institucional y Consumo Masivo
-                </span>
-              </div>
-            )}
+              <h3 className="font-black text-stone-900 text-lg uppercase tracking-tight mt-3">
+                {product.nombre} Buquin
+              </h3>
+              <span className="text-xs font-semibold text-red-600 mt-1">
+                Línea Institucional y Consumo Masivo
+              </span>
+            </div>
           </div>
 
           {/* Right Column: Title in Golden Warm Ochre + Description */}
@@ -305,11 +294,11 @@ export const ProductDetailPageView: React.FC<ProductDetailPageViewProps> = ({
               >
                 <div>
                   {/* Real Photo Packshot */}
-                  <div className="h-56 w-full flex items-center justify-center p-4 bg-stone-50 rounded-2xl border border-stone-100 group-hover:bg-white transition-colors mb-6">
+                  <div className="h-56 w-full flex items-center justify-center p-2 mb-6">
                     <img 
                       src={pres.imagen || product.imagenPrincipal} 
                       alt={`${product.nombre} - ${pres.nombre}`} 
-                      className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                      className="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
 
