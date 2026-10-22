@@ -84,28 +84,16 @@ export const ProductVisual: React.FC<ProductVisualProps> = ({
   // If real image is available and hasn't errored
   if (imageSrc && !imageError) {
     return (
-      <div className={`relative ${containerDimensions} flex items-center justify-center p-3 rounded-2xl overflow-hidden bg-gradient-to-br from-stone-100 via-stone-50 to-stone-200/70 border border-stone-200/80 shadow-inner group-hover:scale-[1.02] transition-transform duration-300`}>
-        {/* Subtle radial ambient glow based on product theme */}
-        <div 
-          className="absolute w-36 h-36 rounded-full opacity-15 blur-2xl pointer-events-none"
-          style={{ backgroundColor: mainColor }}
-        />
-
-        {/* Real Product Packshot */}
+      <div className={`relative ${containerDimensions} flex items-center justify-center p-1 overflow-visible group-hover:scale-[1.02] transition-transform duration-300`}>
+        {/* Product packaging blends into the surrounding card so only the sachet or gallon stands out. */}
         <div className="relative w-full h-full flex items-center justify-center">
           <img
             src={imageSrc}
             alt={alt || `${badgeText} - ${presentationType}`}
             onError={() => setImageError(true)}
-            className="max-h-full max-w-full object-contain mix-blend-multiply filter drop-shadow-lg group-hover:drop-shadow-2xl transition-all duration-300 scale-[1.06]"
+            className="max-h-full max-w-full object-contain mix-blend-multiply transition-transform duration-300"
             loading="lazy"
           />
-        </div>
-
-        {/* Floating badge */}
-        <div className="absolute top-2 right-2 bg-white/95 backdrop-blur-xs text-stone-800 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-xs border border-stone-200 flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: mainColor }} />
-          <span>{getBadgeFormat()}</span>
         </div>
       </div>
     );
@@ -113,12 +101,7 @@ export const ProductVisual: React.FC<ProductVisualProps> = ({
 
   // Fallback SVG representation
   return (
-    <div className={`relative ${containerDimensions} flex items-center justify-center p-3 rounded-2xl overflow-hidden bg-gradient-to-br from-neutral-100 via-stone-50 to-neutral-200 shadow-inner group-hover:scale-[1.02] transition-transform duration-300`}>
-      {/* Decorative background glow */}
-      <div 
-        className="absolute w-32 h-32 rounded-full opacity-20 blur-xl pointer-events-none"
-        style={{ backgroundColor: mainColor }}
-      />
+    <div className={`relative ${containerDimensions} flex items-center justify-center p-2 overflow-visible group-hover:scale-[1.02] transition-transform duration-300`}>
 
       {isGalon ? (
         /* Galón Graphic */
@@ -192,10 +175,6 @@ export const ProductVisual: React.FC<ProductVisualProps> = ({
         </div>
       )}
 
-      {/* Floating mini badge */}
-      <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-xs text-stone-800 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-xs border border-stone-200">
-        {getBadgeFormat()}
-      </div>
     </div>
   );
 };
