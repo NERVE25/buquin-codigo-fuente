@@ -79,23 +79,23 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => handleNav('inicio')} 
             className="flex items-center gap-3 text-left group focus:outline-hidden"
           >
-            <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center p-1 shadow-sm border border-stone-200 group-hover:scale-105 transition-transform overflow-hidden">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-xl bg-white flex items-center justify-center p-0.5 shadow-sm border border-stone-200 group-hover:scale-105 transition-transform overflow-hidden">
               <img 
                 src="/assets/aistudio/logob_865b9df2.jpg" 
-                alt="Logo Productos Buquin" 
-                className="w-full h-full object-contain"
+                alt="Logo Productos Buquin SAS" 
+                className="w-full h-full object-contain scale-110"
               />
             </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-black text-xl tracking-tight text-stone-900 uppercase">
-                  BUQUIN
+            <div className="min-w-0">
+              <div className="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+                <span className="font-black text-[15px] sm:text-lg tracking-tight text-stone-900 uppercase leading-tight">
+                  PRODUCTOS BUQUIN
                 </span>
-                <span className="text-[10px] font-bold bg-red-100 text-red-700 px-1.5 py-0.2 rounded border border-red-200">
+                <span className="text-[9px] sm:text-[10px] font-bold bg-red-100 text-red-700 px-1.5 py-0.5 rounded border border-red-200">
                   SAS
                 </span>
               </div>
-              <p className="text-[11px] text-stone-500 font-medium tracking-wide">
+              <p className="text-[10px] sm:text-[11px] text-stone-500 font-medium tracking-wide leading-tight mt-0.5">
                 Salsas &amp; Aderezos de Calidad
               </p>
             </div>
