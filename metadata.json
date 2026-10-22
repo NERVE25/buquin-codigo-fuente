@@ -1,0 +1,6 @@
+{
+  "name": "Productos Buquin SAS - Salsas y Aderezos",
+  "description": "Sitio web oficial de Productos Buquin SAS. Más de 20 años elaborando salsas de tomate, BBQ, picante, miel y aderezos de calidad en Colombia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
