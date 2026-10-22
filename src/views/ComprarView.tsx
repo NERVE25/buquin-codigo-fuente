@@ -74,9 +74,9 @@ export const ComprarView: React.FC = () => {
                 </div>
                 {/* Thumbnails of classic products */}
                 <div className="flex -space-x-2">
-                  <img src="/assets/aistudio/tomate8_9157d505.jpg" alt="Salsa Tomate" className="w-10 h-10 object-contain rounded-xl bg-white border border-stone-200 shadow-xs p-0.5" />
-                  <img src="/assets/aistudio/bbq8_5a5aecf8.jpg" alt="Salsa BBQ" className="w-10 h-10 object-contain rounded-xl bg-white border border-stone-200 shadow-xs p-0.5" />
-                  <img src="/assets/aistudio/picante8_33e51b3a.jpg" alt="Salsa Picante" className="w-10 h-10 object-contain rounded-xl bg-white border border-stone-200 shadow-xs p-0.5" />
+                  <img src="/assets/aistudio/tomate8_9157d505.jpg" alt="Salsa Tomate" className="w-10 h-10 object-contain mix-blend-multiply" />
+                  <img src="/assets/aistudio/bbq8_5a5aecf8.jpg" alt="Salsa BBQ" className="w-10 h-10 object-contain mix-blend-multiply" />
+                  <img src="/assets/aistudio/picante8_33e51b3a.jpg" alt="Salsa Picante" className="w-10 h-10 object-contain mix-blend-multiply" />
                 </div>
               </div>
               <h3 className="text-lg font-bold text-stone-900">Salsas Clásicas</h3>
@@ -97,8 +97,8 @@ export const ComprarView: React.FC = () => {
                 </div>
                 {/* Thumbnails of miel products */}
                 <div className="flex -space-x-2">
-                  <img src="/assets/aistudio/miel8_0c449177.jpg" alt="Sirope Miel 8g" className="w-10 h-10 object-contain rounded-xl bg-white border border-stone-200 shadow-xs p-0.5" />
-                  <img src="/assets/aistudio/miel6_80743061.jpg" alt="Sirope Miel 6g" className="w-10 h-10 object-contain rounded-xl bg-white border border-stone-200 shadow-xs p-0.5" />
+                  <img src="/assets/aistudio/miel8_0c449177.jpg" alt="Sirope Miel 8g" className="w-10 h-10 object-contain mix-blend-multiply" />
+                  <img src="/assets/aistudio/miel6_80743061.jpg" alt="Sirope Miel 6g" className="w-10 h-10 object-contain mix-blend-multiply" />
                 </div>
               </div>
               <h3 className="text-lg font-bold text-stone-900">Siropes Dulces</h3>
@@ -119,8 +119,8 @@ export const ComprarView: React.FC = () => {
                 </div>
                 {/* Thumbnails of special galones */}
                 <div className="flex -space-x-2">
-                  <img src="/assets/aistudio/ssygl_c42f7dfc.jpg" alt="Salsa Soya Galón" className="w-10 h-10 object-contain rounded-xl bg-white border border-stone-200 shadow-xs p-0.5" />
-                  <img src="/assets/aistudio/sngl_2c0dbc6a.jpg" alt="Salsa Negra Galón" className="w-10 h-10 object-contain rounded-xl bg-white border border-stone-200 shadow-xs p-0.5" />
+                  <img src="/assets/aistudio/ssygl_c42f7dfc.jpg" alt="Salsa Soya Galón" className="w-10 h-10 object-contain mix-blend-multiply" />
+                  <img src="/assets/aistudio/sngl_2c0dbc6a.jpg" alt="Salsa Negra Galón" className="w-10 h-10 object-contain mix-blend-multiply" />
                 </div>
               </div>
               <h3 className="text-lg font-bold text-stone-900">Salsas Especiales</h3>
@@ -216,7 +216,7 @@ export const ComprarView: React.FC = () => {
                           <img 
                             src={prod.imagenPrincipal} 
                             alt={prod.nombre} 
-                            className="w-5 h-5 object-contain rounded shrink-0 bg-white" 
+                            className="w-5 h-5 object-contain rounded shrink-0 mix-blend-multiply" 
                           />
                         )}
                         <span className="truncate">{prod.nombre}</span>
